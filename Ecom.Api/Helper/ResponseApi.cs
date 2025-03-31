@@ -16,7 +16,9 @@
                 200 => "Done",
                 400 => "bad Request",
                 401 => "Unauthorized",
+                404 => "Not Found",
                 500 => " Server Error",
+                429 => " Too Many Request",
                 _ => "Null"
             };
         }

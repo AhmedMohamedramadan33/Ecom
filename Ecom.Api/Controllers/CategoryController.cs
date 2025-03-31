@@ -106,5 +106,12 @@ namespace Ecom.Api.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet("server-error")]
+        public async Task<IActionResult> GetServerError()
+        {
+            var thing = await _unitOfWork.ProductRepository.GetByIdAsync(42);
+            thing.Name = " ";
+            return Ok(thing);
+        }
     }
 }
